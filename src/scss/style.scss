@@ -1,0 +1,39 @@
+@use 'conf' as *;
+@use 'sass-mq' as *;
+@import '~the-new-css-reset';
+
+html {
+  font-size: 14px;
+
+  @include mq($from: tablet) {
+    font-size: 18px;
+  }
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.app {
+  background-color: var(--white);
+  color: var(--black);
+  min-height: 100vh;
+  min-width: 100%;
+  position: relative;
+  transition: all .2s ease 0s;
+}
+
+.container {
+  @extend %container;
+  padding: px2rem(45px) 0;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-size: px2rem(48px);
+  font-weight: $font-weight-700;
+  gap: px2rem(30px);
+  text-align: center;
+  text-transform: uppercase;
+}

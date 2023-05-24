@@ -1,0 +1,61 @@
+@use '../scss/conf' as *;
+@use '~sass-mq' as *;
+
+.nav-bar {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.navigation {
+  @extend %container;
+  align-items: center;
+  display: flex;
+  height: px2rem(70px);
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  gap: px2rem(10px);
+
+  @include mq($from: tablet) {
+    gap: px2rem(30px);
+  }
+}
+
+.nav-item {
+  font-weight: $font-weight-700;
+
+  &.active,
+  &:hover {
+    color: var(--hover);
+  }
+}
+
+.cta-nav-btn {
+  align-items: center;
+  border: 1px solid var(--white);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px 9px;
+
+  @include mq($from: tablet) {
+    flex-direction: row;
+    gap: px2rem(15px);
+    padding: 6px 18px;
+  }
+
+  label {
+    display: none;
+    @include mq($from: tablet) {
+      display: block;
+    }
+  }
+
+  &:hover {
+    color: var(--hover);
+    cursor: pointer;
+  }
+}

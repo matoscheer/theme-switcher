@@ -1,0 +1,7 @@
+@use '../scss/conf' as *;
+
+.text {
+  font-size: px2rem(16px);
+  font-weight: $font-weight-400;
+  text-transform: none;
+}

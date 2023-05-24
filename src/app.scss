@@ -1,0 +1,13 @@
+:root {
+  --black: #000000;
+  --hover: #e6b40d;
+  --white: #ffffff;
+}
+
+[data-theme="dark"] {
+  --black: #ffffff;
+  --hover: #177dc9;
+  --white: #000000;
+}
+
+@import './scss/style';
