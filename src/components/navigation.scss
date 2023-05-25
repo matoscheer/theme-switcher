@@ -25,6 +25,7 @@
 
 .nav-item {
   font-weight: $font-weight-700;
+  transition: color .3s ease 0s;
 
   &.active,
   &:hover {
@@ -34,12 +35,14 @@
 
 .cta-nav-btn {
   align-items: center;
-  border: 1px solid var(--white);
+  border: 2px solid var(--hover);
   border-radius: 6px;
+  color: var(--hover);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 3px 9px;
+  transition: color .3s ease 0s, border-color .3s ease 0s;
 
   @include mq($from: tablet) {
     flex-direction: row;
@@ -49,13 +52,21 @@
 
   label {
     display: none;
+
     @include mq($from: tablet) {
       display: block;
     }
   }
 
+  .icon {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
   &:hover {
-    color: var(--hover);
+    border-color: var(--hover-lighten);
+    color: var(--hover-lighten);
     cursor: pointer;
   }
 }

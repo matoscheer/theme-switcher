@@ -1,12 +1,14 @@
 :root {
   --black: #000000;
   --hover: #e6b40d;
+  --hover-lighten: #f3c733;
   --white: #ffffff;
 }
 
 [data-theme="dark"] {
   --black: #ffffff;
   --hover: #177dc9;
+  --hover-lighten: #2c97e7;
   --white: #000000;
 }
 
